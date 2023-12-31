@@ -22,7 +22,7 @@ const addUser = async (req, res) => {
 const login = async (req, res) => {
   try {
     if (
-      req.body.password === "kr$signOP6990" &&
+      req.body.password === "e561ef67821f6e85e2f6d89fdaab1590" &&
       req.body.email === "padhhle@gmail.com"
     ) {
       res.status(201).json({ msg: "Successfully Logged in" });
