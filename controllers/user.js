@@ -21,8 +21,13 @@ const addUser = async (req, res) => {
 
 const login = async (req, res) => {
   try {
+    user = await userModel.findOne({
+      username: req.body.username,
+      email: req.body.email,
+    });
+
     if (
-      req.body.password === "e561ef67821f6e85e2f6d89fdaab1590" &&
+      req.body.password === user.password &&
       req.body.email === "padhhle@gmail.com"
     ) {
       res.status(201).json({ msg: "Successfully Logged in" });
